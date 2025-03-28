@@ -20,10 +20,24 @@
 
 # Question 1 - Loops and Lists
 # You are given a list of numbers representing weekly sales in units.
-weekly_sales = [120, 85, 100, 90, 110, 95, 130]
+# weekly_sales = [120, 85, 100, 90, 110, 95, 130]
+# # Calculate the average sales
+# average_sales = sum(weekly_sales) / len(weekly_sales)
+# print(f"Average sales: {average_sales:.2f} units")
 
-# Write a for loop that iterates through the list and prints whether each week's sales were above or below the average sales for the period.
-# Calculate and print the average sales.
+# # Iterate through the list and compare each week's sales with the average
+# for week, sales in enumerate(weekly_sales, start=1):
+#     if sales > average_sales:
+#         print(f"Week {week}: {sales} units (Above average)")
+#     elif sales < average_sales:
+#         print(f"Week {week}: {sales} units (Below average)")
+#     else:
+#         print(f"Week {week}: {sales} units (Equal to average)"
+#               First, we calculate the average sales for the week. 
+# Then, we iterate through each week’s sales and compare them with the average.
+# Finally, we display whether each week’s sales exceeded or fell short of the average.
+# # Write a for loop that iterates through the list and prints whether each week's sales were above or below the average sales for the period.
+# # Calculate and print the average sales.
 
 #######################################################################################################################################################
 
@@ -33,6 +47,23 @@ customer_feedback = """The product was good but could be improved. I especially 
 
 # Find the first and last occurrence of the words 'good' and 'improved' in the feedback using string methods.
 # Store each position in a list as a tuple (start, end) for both words and print the list.
+
+customer_feedback = """The product was good but could be improved. I especially appreciated the customer support and fast response times."""
+
+# Finding the first occurrence of 'good'
+good_start = customer_feedback.find('good')
+good_end = good_start + len('good')
+
+# Finding the first occurrence of 'improved'
+improved_start = customer_feedback.find('improved')
+improved_end = improved_start + len('improved')
+
+# Storing the positions in a list as tuples
+positions = [(good_start, good_end), (improved_start, improved_end)]
+
+# Printing the result
+print(positions)
+
 
 #######################################################################################################################################################
 
